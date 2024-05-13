@@ -1,12 +1,10 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
 
 class Users {
+    public String userPath = "C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\User.csv";
+
     public static ArrayList<Users> user_list = new ArrayList<>();
     ArrayList<Location> favLoc = new ArrayList<>();
     ArrayList<Hotels> favHotels = new ArrayList<>();
@@ -17,6 +15,9 @@ class Users {
     Users(String u_name, String passkey) {
         this.username = u_name;
         this.password = passkey;
+    }
+    String getPassword(){
+        return this.password;
     }
     static ArrayList<Users> giveUserList(){
         return user_list;
@@ -36,7 +37,7 @@ class Users {
                 System.out.println("Wrong password please try again: ");
                 return 0;
             }
-          }
+        }
         else{
             System.out.println("Username not found...");
             return 0;
@@ -51,15 +52,22 @@ class Users {
         }
         else{
             user_list.add(this);
-            File fp = new File("C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\location.csv");
+
+            File fp = new File("User.csv");
             FileWriter fw = new FileWriter(fp,true);
+            ArrayList<String> data = new ArrayList<>();
+            data.add(username);
+            data.add(password);
             StringBuilder sb = new StringBuilder();
-            sb.append(username);
-            sb.append(",");
-            sb.append(password);
+            for(int i=0;i<data.size();i++){
+                sb.append(data.get(i));
+                if(i < data.size()-1){
+                    sb.append(",");
+                }
+            }
             fw.write(sb.toString());
             fw.write("\n");
-            System.out.println("New user has been added successfully");
+            fw.close();
         }
     }
 
@@ -107,7 +115,8 @@ class Users {
     static int addFavLocation(String loc,String user){
         ArrayList<Location> locList = Location.getLocList();
         for(Location l : locList){
-            if(loc.equals(l.locationName)){
+            if(l.locationName.equals(loc)){
+                System.out.println("Hello");
                 for(Users u : user_list){
                     if(u.username.equals(user)){
                         u.favLoc.add(l);
@@ -115,23 +124,23 @@ class Users {
                     }
                 }
             }
-
         }
         return -1;
     }
     static void showFavLoc(String user){
-        boolean isEmpty = true;
+        boolean flag = true;
         for(Users u : user_list){
             if(u.username.equals(user)){
                 for(Location l : u.favLoc){
                     System.out.println(l.locationName);
+                    flag = false;
                     break;
                 }
 //                if(isEmpty) System.out.println("The user has not added any location to their favourite List.");
             }
-            else{
-                System.out.println("You have entered invalid username try again.");
-            }
+        }
+        if(flag){
+            System.out.println("You have entered invalid username try again.");
         }
     }
     static int addFavHotels(String hname, String user){
@@ -149,18 +158,18 @@ class Users {
         return -1;
     }
     static void showFavHotels(String user){
-
+        boolean b = true;
         for(Users u : user_list){
             if(u.username.equals(user)){
                 for(Hotels h : u.favHotels){
                     System.out.println(h.hotelName);
-                    break;
+                    b = false;
                 }
 
             }
-            else{
-                System.out.println("You have entered invalid username try again.");
-            }
+        }
+        if(b){
+            System.out.println("You have entered invalid username try again.");
         }
     }
     static int addFavRest(String name, String user){
@@ -297,13 +306,49 @@ class Hotels extends Cities{
         }
         return 0;
     }
-    static void findHotel(int price){
+    static void findHotelPrice(){
+        Scanner sc = new Scanner(System.in);
+        int price;
+        System.out.print("Enter the price upto which you want to stay in hotel: ");
+        price = sc.nextInt();
+        System.out.print("Enter the city in which you want to find hotel: ");
+        sc.nextLine();
+        String cityName = sc.nextLine();
         for(Hotels h : hotelList){
-            if(h.price<=price){
-                System.out.println(h.hotelName);
+            if(h.price<=price && h.cityName.equals(cityName)){
+                System.out.println(h.hotelName + " - " + h.price + " Rs.");
             }
         }
     }
+    static void findHotelStar(){
+        Scanner sc = new Scanner(System.in);
+        int star;
+        System.out.print("Enter in which star or above hotel you want to stay: ");
+        star = sc.nextInt();
+        System.out.print("Enter the city in which you want to find hotel: ");
+        sc.nextLine();
+        String cityName = sc.nextLine();
+        for(Hotels h : hotelList){
+            if(h.star>=star && h.cityName.equals(cityName)){
+                System.out.println(h.hotelName + " - " + h.star + "*");
+            }
+        }
+    }
+    static void findHotelRating(){
+        Scanner sc = new Scanner(System.in);
+        float rating;
+        System.out.print("Enter which rating onwards you want to find hotel: ");
+        rating = sc.nextFloat();
+        System.out.print("Enter the city in which you want to find hotel: ");
+        sc.nextLine();
+        String cityName = sc.nextLine();
+        for(Hotels h : hotelList){
+            if(h.rating>=rating && h.cityName.equals(cityName)){
+                System.out.println(h.hotelName + " - " + h.rating);
+            }
+        }
+    }
+
     static ArrayList<Hotels> getHotelList(){
         return hotelList;
     }
@@ -353,35 +398,97 @@ class Restaurant extends Cities{
         }
         return -1;
     }
+    static void findResDist(){
+//        ArrayList<Restaurant> rest = new ArrayList<>();
+//        rest =Restaurant.getRestList();
+        Scanner sc = new Scanner(System.in);
+        double dist;
+        System.out.print("Enter the km upto which you want to find a restaurant: ");
+        dist = sc.nextDouble();
+        System.out.print("Enter the city in which you want to find restaurant: ");
+        sc.nextLine();
+        String cityName = sc.nextLine();
+        for(Restaurant r : rest){
+            if(r.dist_from_center<=dist && r.cityName.equals(cityName)){
+                System.out.println(r.rname + " - " + r.dist_from_center +" kms");
+            }
+        }
+    }
+    static void findRestIsVeg(){
+        Scanner sc = new Scanner(System.in);
+        boolean isVeg;
+        System.out.print("Do you want to find Vegeterian restaurant?");
+        isVeg = sc.nextBoolean();
+        System.out.print("Enter the city in which you want to find restaurant: ");
+        sc.nextLine();
+        String cityName = sc.nextLine();
+        if ((isVeg)) {
+            System.out.println("Vegeterian Hotels are: ");
+        } else {
+            System.out.println("Non Vegeterian Hotels are: ");
+        }
+        for(Restaurant r : rest){
+            if(r.cityName.equals(cityName)){
+                if(r.isPureVeg && isVeg){
+                    System.out.println(r.rname);
+                }
+                else if(!(r.isPureVeg || isVeg)){
+                    System.out.println(r.rname);
+                }
+            }
+        }
+    }
+    static void findRestRating(){
+        Scanner sc = new Scanner(System.in);
+        double rating;
+        System.out.print("Enter the rating above which you want to find hotel: ");
+        rating = sc.nextDouble();
+        System.out.print("Enter the city in which you want to find restaurant: ");
+        sc.nextLine();
+        String cityName = sc.nextLine();
+        for(Restaurant r : rest){
+            if(r.rating>=rating && r.cityName.equals(cityName)){
+                System.out.println(r.rname + " - " + r.rating);
+            }
+        }
+    }
 }
 class admin{
+    public static String userPath = "C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\User.csv";
+    public static String locPath = "C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\location.csv";
+    public static String hotelPath = "C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\Hotel.csv";
+    public static String restPath = "C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\Restaurant.csv";
     static void admin2() throws FileNotFoundException{
-        File fp = new File("C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\Users.csv");
-        Scanner read = new Scanner(fp);
-        String u_name;
-        String psw;
-        while(read.hasNextLine()){
-            String s = read.nextLine();
-            String[] arr = s.split(",");
-            u_name = arr[0];
-            psw = arr[1];
-            System.out.print(arr[0]);
-            System.out.println(arr[1]);
-            Users newUser = new Users(u_name,psw);
-            Users.user_list.add(newUser);
+        try{
+            File fp = new File(userPath);
+            Scanner read = new Scanner(fp);
+            String u_name;
+            String psw;
+            while(read.hasNextLine()){
+                String s = read.nextLine();
+                String[] arr = s.split(",",2);
+                u_name = arr[0];
+                psw = arr[1];
+                Users newUser = new Users(u_name,psw);
+                Users.user_list.add(newUser);
+            }
+            read.close();
+        }catch(FileNotFoundException e){
+            System.out.println("Cannot found path\n"+e.toString());
+            System.exit(0);
         }
-        read.close();
     }
     static void admin1() throws FileNotFoundException {
-        File fp = new File("C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\location.csv");
+        File fp = new File("location.csv");
         Scanner read = new Scanner(fp);
         String city, dir, name;
         double rate;
         boolean t;
         while(read.hasNextLine()){
             String s = read.nextLine();
-//            String[] arr = s.split(",",5);
+            if(s.equals(",,,,,")) continue;
             String[] arr = s.split(",");
+//            String[] arr = s.split(",");
             city = arr[0];
             dir = arr[1];
             name = arr[2];
@@ -390,11 +497,12 @@ class admin{
             Location.addLocation(city,dir,name,rate,t);
         }
         read.close();
-        fp = new File("C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\Hotel.csv");
+        fp = new File("Hotel.csv");
         read = new Scanner(fp);
         int price, star;
         while(read.hasNextLine()){
             String s = read.nextLine();
+            if(s.equals(",,,,,")) continue;
             String[] arr = s.split(",",6);
             city = arr[0];
             dir = arr[1];
@@ -405,11 +513,12 @@ class admin{
             Hotels.addHotel(city,dir,star,name,price,rate);
         }
         read.close();
-        fp = new File("C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\Restaurant.csv");
+        fp = new File("Restaurant.csv");
         read = new Scanner(fp);
         double dist;
         while(read.hasNextLine()){
             String s = read.nextLine();
+            if(s.equals(",,,,,") || s.isEmpty()) continue;
             String[] arr = s.split(",",6);
             city = arr[0];
             dir = arr[1];
@@ -420,6 +529,57 @@ class admin{
             Restaurant.addRest(city,dir,name,rate,t,dist);
         }
     }
+    static void updateLocation() throws IOException {
+        ArrayList<Location> loclist;
+        loclist = Location.getLocList();
+
+        try (PrintWriter pw = new PrintWriter(new File("location.csv"))) {
+            for (Location l : loclist) {
+                StringJoiner joiner = new StringJoiner(",");
+                joiner.add(l.cityName)
+                        .add(l.direction)
+                        .add(l.locationName).add(String.valueOf(l.rating)).add(String.valueOf(l.isTicket));
+                pw.println(joiner.toString());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+    static void updateHotel() throws IOException {
+        ArrayList<Hotels> hotellist;
+        hotellist = Hotels.getHotelList();
+
+        try (PrintWriter pw = new PrintWriter(new File("Hotel.csv"))) {
+            for (Hotels l : hotellist) {
+                StringJoiner joiner = new StringJoiner(",");
+                joiner.add(l.cityName)
+                        .add(l.direction).add(String.valueOf(l.star)).add(l.hotelName)
+                        .add(String.valueOf(l.price)).add(String.valueOf(l.rating));
+                pw.println(joiner.toString());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+    static void updateRest() throws IOException {
+        ArrayList<Restaurant> restlist;
+        restlist = Restaurant.getRestList();
+
+        try (PrintWriter pw = new PrintWriter(new File("Restaurant.csv"))) {
+            for (Restaurant l : restlist) {
+                StringJoiner joiner = new StringJoiner(",");
+                joiner.add(l.cityName)
+                        .add(l.direction).add(l.rname)
+                        .add(String.valueOf(l.rating)).add(String.valueOf(l.isPureVeg)).add(String.valueOf(l.dist_from_center));
+                pw.println(joiner.toString());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
 
 
@@ -427,12 +587,16 @@ public class Main {
     public static void main(String[] args) throws IOException {
         admin.admin2();
         admin.admin1();
+        String locPath = "C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\location.csv";
+        String hotelPath = "C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\Hotel.csv";
+        String restPath = "C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\Restaurant.csv";
+        String userPath = "C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\User.csv";
         Scanner sc = new Scanner(System.in);
         int choice;
         System.out.println("Welcome to Trip Advisor...");
         System.out.println("You can create user or login...");
         do {
-            System.out.println("0. Sign Up User\n1. Login User\n2. Delete User\n3. Display Users\n4. Exit");
+            System.out.println("0. Sign Up User\n1. Login User\n2. Exit");
             System.out.println("Enter your choice: ");
             choice = sc.nextInt();
             String u_name,password;
@@ -454,13 +618,41 @@ public class Main {
                     newUser = new Users(u_name, password);
                     int logIn  = newUser.userLogin();
                     if(logIn==1){
-                        admin.admin1();
+                        int c;
+                        boolean flag = true;
+                        do{
+                            System.out.println("1. To display Users.\n2. To delete Users\n3. Exit");
+                            c = sc.nextInt();
+                            switch (c) {
+                                case 1:
+                                    Users.displayUsers();
+                                    break;
+                                case 2:
+                                    System.out.print("Enter username to delete: ");
+                                    String deleteUsername = sc.next();
+                                    Users.deleteUser(deleteUsername);
+                                    break;
+                                case 3:
+                                    try (PrintWriter pw = new PrintWriter(new File("User.csv"))) {
+                                        for (Users l : Users.user_list) {
+                                            StringJoiner joiner = new StringJoiner(",");
+                                            joiner.add(l.username)
+                                                    .add(l.getPassword());
+                                            pw.println(joiner.toString());
+                                        }
+                                    } catch (FileNotFoundException e) {
+                                        e.printStackTrace();
+                                    }
+                                    flag = false;
+                                    break;
+                            }
+                        }while(flag);
                     }
                     else if(logIn==2){
                         int userChoice;
                         boolean flag = true;
                         do{
-                            System.out.println("1. Adding Favourite Location\n2. Adding Favourite Hotel\n3. Adding Favourite Restaurants\n4. Show Favourite Location\n5. Show Favourite Hotels\n6. Show Favourite Restaurants\n7. To give Ratings\n8. To find Hotels\n 9. Go to main menu");
+                            System.out.println("1. Adding Favourite Location\n2. Adding Favourite Hotel\n3. Adding Favourite Restaurants\n4. Show Favourite Location\n5. Show Favourite Hotels\n6. Show Favourite Restaurants\n7. To give Ratings\n8. To find Hotels\n9. To find Restaurants. \n10. Logout");
                             System.out.println("Enter your choice: ");
                             userChoice = sc.nextInt();
                             sc.nextLine();
@@ -477,38 +669,23 @@ public class Main {
                                         System.out.println("Do you want to add location to our data?(y/n)");
                                         char ans = sc.next().charAt(0);
                                         if(ans=='y'){
-                                            File fp = new File("C:\\Users\\dhpar\\OneDrive - daiict.ac.in\\SEM 2\\MC 122\\MC122 Project\\Location.csv");
-                                            FileWriter fw = new FileWriter(fp,true);
-                                            fw.write("\n");
-                                            ArrayList<String> data = new ArrayList<>();
-                                            String s;
                                             int c;
+                                            boolean isTicket;
                                             System.out.print("Enter the name of the city in which this is located: ");
                                             sc.nextLine();
-                                            s = sc.nextLine();
-                                            data.add(s);
+                                            String cityName = sc.nextLine();
                                             System.out.print("Enter the direction of the city: ");
-                                            s = sc.nextLine();
-                                            data.add(s);
-                                            data.add(loc);
-                                            data.add("0.0");
+                                            String dir = sc.nextLine();
                                             System.out.print("Enter whether ticket is required or not(1 for yes/0 for no): ");
                                             c = sc.nextInt();
                                             if(c==1){
-                                                data.add("TRUE");
+                                                isTicket = true;
                                             }
-                                            if(c==0){
-                                                data.add("FALSE");
+                                            else{
+                                                isTicket = false;
                                             }
-                                            StringBuilder sb = new StringBuilder();
-                                            for(int i=0;i<data.size();i++){
-                                                sb.append(data.get(i));
-                                                if(i < data.size()-1){
-                                                    sb.append(",");
-                                                }
-                                            }
-                                            fw.write(sb.toString());
-                                            fw.close();
+                                            Location.addLocation(cityName, dir, loc, 0, isTicket);
+                                            System.out.println("Your given location has been added successfully...Now you can add it as your favourite place");
                                         }
                                     }
                                     break;
@@ -521,6 +698,22 @@ public class Main {
                                     }
                                     else{
                                         System.out.println("Sorry the entered Hotel does not exist");
+                                        System.out.println("Do you want to add Hotel to our data?(y/n)");
+                                        char ans = sc.next().charAt(0);
+                                        if(ans=='y'){
+                                            int c;
+                                            System.out.print("Enter the name of the city in which this is located: ");
+                                            sc.nextLine();
+                                            String cityName = sc.nextLine();
+                                            System.out.print("Enter the direction of the city: ");
+                                            String dir = sc.nextLine();
+                                            System.out.print("Enter which star Hotel it is: ");
+                                            int star = sc.nextInt();
+                                            System.out.print("Enter the price of that Hotel: ");
+                                            int price = sc.nextInt();
+                                            Hotels.addHotel(cityName, dir, star, hotel, price, 0);
+                                            System.out.println("Your given hotel has been added successfully...Now you can add it as your favourite place");
+                                        }
                                     }
                                     break;
                                 case 3:
@@ -532,6 +725,28 @@ public class Main {
                                     }
                                     else{
                                         System.out.println("Sorry the entered Restaurant does not exist");
+                                        System.out.println("Do you want to add Restaurant to our data?(y/n)");
+                                        char ans = sc.next().charAt(0);
+                                        if(ans=='y'){
+                                            int c;
+                                            System.out.print("Enter the name of the city in which this is located: ");
+                                            sc.nextLine();
+                                            String cityName = sc.nextLine();
+                                            System.out.print("Enter the direction of the city: ");
+                                            String dir = sc.nextLine();
+                                            System.out.print("Is the restaurant pure veg? ");
+                                            c = sc.nextInt();
+                                            boolean b;
+                                            if(c==1){
+                                                b = true;
+                                            }else{
+                                                b = false;
+                                            }
+                                            System.out.println("What is the distance of that restaurant from centre: ");
+                                            int dist = sc.nextInt();
+                                            Restaurant.addRest(cityName, dir, restaurant, 0, b, dist);
+                                            System.out.println("Your given restaurant has been added successfully...Now you can add it as your favourite place");
+                                        }
                                     }
                                     break;
                                 case 4:
@@ -596,36 +811,59 @@ public class Main {
                                     }while (f);
                                     break;
                                 case 8:
-                                    int price;
-                                    price = sc.nextInt();
-                                    Hotels.findHotel(price);
+                                    boolean b = true;
+                                    do{
+                                        System.out.println("1. Find by price\n2. Find by star of hotel\n3. Find by rating\n4. Exit");
+                                        int chooseFindHotel = sc.nextInt();
+                                        switch (chooseFindHotel){
+                                            case 1:
+                                                Hotels.findHotelPrice();
+                                                break;
+                                            case 2:
+                                                Hotels.findHotelStar();
+                                                break;
+                                            case 3:
+                                                Hotels.findHotelRating();
+                                                break;
+                                            case 4:
+                                                b = false;
+                                        }
+                                    }while (b);
                                     break;
                                 case 9:
+                                    boolean c = true;
+                                    do{
+                                        System.out.println("1. Find by distance\n2. Find by vegeterian hotel\n3. Find by rating\n4. Exit");
+                                        int chooseFindRest = sc.nextInt();
+                                        switch (chooseFindRest){
+                                            case 1:
+                                                Restaurant.findResDist();
+                                                break;
+                                            case 2:
+                                                Restaurant.findRestIsVeg();
+                                                break;
+                                            case 3:
+                                                Restaurant.findRestRating();
+                                                break;
+                                            case 4:
+                                                c = false;
+                                        }
+                                    }while (c);
+                                    break;
+                                case 10:
                                     flag = false;
                             }
                         }while(flag);
                     }
                     break;
                 case 2:
-                    System.out.print("Enter username to delete: ");
-                    String deleteUsername = sc.next();
-                    Users.deleteUser(deleteUsername);
-                    break;
-                case 3:
-                    Users.displayUsers();
-                    break;
-                case 4:
+                    admin.updateLocation();
+                    admin.updateHotel();
+                    admin.updateRest();
                     System.out.println("Exiting...Thank You");
                     break;
 
             }
-        } while (choice != 4);
-//        Users.addFavLocation("Saheliyon Ki Bari","dhyey");
-//        Users.addFavLocation("Saheliyon Ki Bari","hemang");
-//        Users.addFavHotels("The Leela Palace","dhyey");
-//        Users.showFavLoc("dhyey");
-//        Users.showFavHotels("dhyey");
-
-
+        } while (choice != 2);
     }
 }
