@@ -1,0 +1,51 @@
+﻿Udaipur,West,Oasis,4.0,true,2.4
+Udaipur,West,Khamma Ghani,4.5,true,1.1
+Udaipur,West,Kitchens of Mewar,3.3,false,3.6
+Udaipur,West,Jainam,3.7,false,0.4
+Udaipur,West,Pavitra,3.9,true,2.7
+Jaipur,North,Bharat Mahal Palace,4.2,true,1.5
+Jaipur,North,Royal Rajputana Palace,4.6,false,3.2
+Jaipur,North,Grand Haveli,3.8,true,2.1
+Jaipur,North,Palace of Wheels,4.7,true,1.8
+Jaipur,North,Raj Vilas,3.5,false,2.9
+Delhi,North,Imperial Palace,4.4,true,2.3
+Delhi,North,Majestic Mansion,3.9,false,3.6
+Delhi,North,Serene Suites,4.1,true,1.9
+Delhi,North,Cosy Corner,3.7,false,2.8
+Delhi,North,Luxor Residency,4.3,true,2.5
+Mumbai,West,Marine Palace,4.5,true,1.7
+Mumbai,West,Sapphire Suites,4.2,false,3.4
+Mumbai,West,Golden Grandeur,4.1,true,2.2
+Mumbai,West,Silver Shores,4.5,false,3.1
+Mumbai,West,Pearl Plaza,4.3,true,1.6
+Goa,West,Tropical Retreat,4.6,true,1.3
+Goa,West,Coastal Comforts,4.4,false,2.7
+Goa,West,Sunset Serenity,3.9,true,2.8
+Goa,West,Beachside Bliss,4.2,false,3.2
+Goa,West,Island Oasis,4.5,true,1.9
+Varanasi,North,River Retreat,4.7,true,1.2
+Varanasi,North,Sacred Stay,3.8,false,3.5
+Varanasi,North,Divine Dwellings,4.0,true,2.6
+Varanasi,North,Holy Haven,4.3,false,3.0
+Varanasi,North,Spiritual Sanctuary,4.1,true,1.4
+Kolkata,East,Eastern Elegance,4.4,true,2.0
+Kolkata,East,Ganges Gateway,4.2,false,3.1
+Kolkata,East,Cultural Comforts,3.9,true,2.3
+Kolkata,East,Heritage Hideaway,4.1,false,3.3
+Kolkata,East,Tranquil Temple,4.3,true,1.6
+Chennai,South,Seaside Serenade,4.5,true,1.8
+Chennai,South,Harbour Haven,4.3,false,2.9
+Chennai,South,Southern Symphony,4.0,true,2.5
+Chennai,South,Marina Mansion,4.2,false,3.4
+Chennai,South,Cosmopolitan Comforts,4.4,true,1.7
+Bangalore,South,Garden Grandeur,4.6,true,1.6
+Bangalore,South,Urban Oasis,4.3,false,3.2
+Bangalore,South,Tech Town Towers,4.1,true,2.1
+Bangalore,South,Greenwood Gardens,4.2,false,3.5
+Bangalore,South,Silicon Suites,4.5,true,1.9
+Hyderabad,South,Nizam Nook,4.7,true,1.3
+Hyderabad,South,Pearl Palace,4.4,false,2.8
+Hyderabad,South,Charminar Chalet,3.9,true,2.7
+Hyderabad,South,Lakeside Lodge,4.1,false,4.5
+Hyderabad,South,Heritage Hideout,4.3,true,2.1
+r,r,r,0.0,true,3.4

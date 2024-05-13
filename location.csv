@@ -1,0 +1,379 @@
+﻿Udaipur,West,City Palace,4.5,false
+Udaipur,East,Sajjangarh Palace,3.8,true
+Udaipur,North,Lake Pichola,4.2,false
+Udaipur,South,Jag Mandir,4.6,true
+Udaipur,West,Bagore Ki Haveli,4.0,true
+Udaipur,East,Vintage Car Museum,4.449999999999999,false
+Udaipur,North,Dudh Talai Musical Garden,4.7,true
+Udaipur,South,Saheliyon-ki-Bari,4.1,false
+Udaipur,West,Fateh Sagar Lake,4.4,true
+Udaipur,East,Bhartiya Lok Kala Museum,4.5,false
+Jaipur,North,Amber Fort,4.2,false
+Jaipur,East,City Palace,4.5,true
+Jaipur,South,Hawa Mahal,4.3,true
+Jaipur,West,Jantar Mantar,4.6,false
+Jaipur,North,Jaigarh Fort,4.0,true
+Jaipur,East,Nahargarh Fort,4.1,false
+Jaipur,South,Albert Hall Museum,4.4,true
+Jaipur,West,Galtaji Temple,4.7,false
+Jaipur,North,Sisodia Rani Garden,4.5,true
+Jaipur,East,Birla Mandir,4.8,false
+Delhi,North,Qutub Minar,4.8,false
+Delhi,East,Red Fort,4.7,true
+Delhi,South,Lotus Temple,4.6,true
+Delhi,West,India Gate,4.9,false
+Delhi,North,Humayun's Tomb,4.5,true
+Delhi,East,Akshardham Temple,4.4,false
+Delhi,South,Jama Masjid,4.7,true
+Delhi,West,Raj Ghat,4.4,false
+Delhi,North,Chandni Chowk,4.3,true
+Delhi,East,National Zoological Park,4.2,false
+Mumbai,West,Gateway of India,4.6,false
+Mumbai,East,Elephanta Caves,4.5,true
+Mumbai,South,Marine Drive,4.7,true
+Mumbai,North,Siddhivinayak Temple,4.8,false
+Mumbai,West,Haji Ali Dargah,4.4,true
+Mumbai,East,Chhatrapati Shivaji Maharaj Vastu Sangrahalaya,4.3,false
+Mumbai,South,Bandra-Worli Sea Link,4.2,true
+Mumbai,North,Kanheri Caves,4.1,false
+Mumbai,West,Mahalakshmi Temple,4.9,true
+Mumbai,East,Global Vipassana Pagoda,4.6,false
+Agra,North,Taj Mahal,3.475,false
+Agra,East,Agra Fort,4.2,true
+Agra,South,Fatehpur Sikri,4.0,true
+Agra,West,Itmad-ud-Daulah's Tomb,3.8,false
+Agra,North,Mehtab Bagh,4.5,true
+Agra,East,Akbar's Tomb,3.9,false
+Agra,South,Chini Ka Rauza,4.1,true
+Agra,West,Jama Masjid,4.3,false
+Agra,North,Moti Masjid,4.4,true
+Agra,East,Tomb of Mariam-uz-Zamani,4.6,false
+Varanasi,East,Kashi Vishwanath Temple,4.3,false
+Varanasi,North,Dashashwamedh Ghat,4.5,true
+Varanasi,South,Sarnath,4.2,true
+Varanasi,West,Assi Ghat,4.1,false
+Varanasi,East,Tulsi Manas Temple,4.0,true
+Varanasi,North,Manikarnika Ghat,4.4,false
+Varanasi,South,Bharat Mata Temple,4.6,true
+Varanasi,West,Benaras Hindu University,4.8,false
+Varanasi,East,Annapurna Temple,4.7,true
+Varanasi,North,Ramnagar Fort,4.3,false
+Kolkata,East,Victoria Memorial,4.7,false
+Kolkata,North,Dakshineswar Kali Temple,4.5,true
+Kolkata,South,Eden Gardens,4.6,true
+Kolkata,West,Howrah Bridge,4.8,false
+Kolkata,East,Indian Museum,4.4,true
+Kolkata,North,Belur Math,4.3,false
+Kolkata,South,Kalighat Kali Temple,4.2,true
+Kolkata,West,Science City Kolkata,4.9,true
+Kolkata,East,St. Paul's Cathedral,4.5,false
+Kolkata,North,Vidyasagar Setu,4.6,true
+Hyderabad,South,Charminar,4.1,false
+Hyderabad,East,Golconda Fort,4.3,true
+Hyderabad,North,Hussain Sagar,4.2,true
+Hyderabad,West,Salar Jung Museum,4.5,false
+Hyderabad,South,Mecca Masjid,4.0,true
+Hyderabad,East,Ramoji Film City,4.6,false
+Hyderabad,North,Qutb Shahi Tombs,4.4,true
+Hyderabad,West,Nehru Zoological Park,4.7,true
+Hyderabad,South,Chowmahalla Palace,4.2,false
+Hyderabad,East,Birla Mandir,4.8,false
+Chennai,South,Marina Beach,4.5,false
+Chennai,East,Kapaleeshwarar Temple,4.3,true
+Chennai,North,Fort St. George,4.6,true
+Chennai,West,Chennai Central Railway Station,4.2,false
+Chennai,South,Santhome Cathedral Basilica,4.4,true
+Chennai,East,Elliot's Beach,4.1,false
+Chennai,North,Government Museum,4.7,true
+Chennai,West,Vadapalani Murugan Temple,4.0,true
+Chennai,South,Valluvar Kottam,4.8,false
+Chennai,East,Guindy National Park,4.2,true
+Kochi,South,Mattancherry Palace,4.0,false
+Pune,West,Shaniwar Wada,4.6,false
+Pune,East,Aga Khan Palace,4.3,true
+Pune,North,Sinhagad Fort,4.5,true
+Pune,South,Raja Dinkar Kelkar Museum,4.2,false
+Pune,West,Dagdusheth Halwai Ganpati Temple,4.7,true
+Pune,East,Pataleshwar Cave Temple,4.4,false
+Pune,North,Shivneri Fort,4.8,true
+Pune,South,Vetal Tekdi,4.1,false
+Pune,West,Katraj Snake Park,4.0,true
+Pune,East,Osho International Meditation Resort,4.5,false
+Ahmedabad,West,Sabarmati Ashram,4.2,false
+Lucknow,North,Bara Imambara,4.8,false
+Lucknow,East,Chota Imambara,4.6,true
+Lucknow,South,Rumi Darwaza,4.7,true
+Lucknow,West,Constantia House,4.5,false
+Lucknow,North,Hussainabad Clock Tower,4.4,true
+Lucknow,East,Ambedkar Memorial Park,4.3,false
+Lucknow,South,Janeshwar Mishra Park,4.2,true
+Lucknow,West,Dr. Ram Manohar Lohia Park,4.1,false
+Lucknow,North,State Museum Lucknow,4.0,true
+Lucknow,East,Indira Gandhi Planetarium,4.9,false
+Bhopal,Central,Upper Lake,4.3,false
+Bhopal,South,Shahpura Lake,5.1,true
+Bhopal,North,Van Vihar National Park,3.8,false
+Bhopal,East,Bharat Bhavan,4.5,true
+Bhopal,West,Regional Science Center,4.2,false
+Bhopal,Downtown,Taj-ul-Masajid,4.7,true
+Bhopal,Suburbs,Shaukat Mahal,4.0,false
+Bhopal,Riverside,Boat Club,4.6,true
+Bhopal,Hillside,Moti Masjid,4.4,false
+Bhopal,Urban,Lower Lake,4.8,true
+Amritsar,North,Golden Temple,4.7,false
+Amritsar,South,Jallianwala Bagh,4.5,true
+Amritsar,East,Durgiana Temple,4.6,false
+Amritsar,West,Maharaja Ranjit Singh Museum,4.3,true
+Amritsar,Downtown,Partition Museum,4.8,false
+Amritsar,Suburbs,Wagah Border,4.9,true
+Amritsar,Riverside,Ram Bagh Garden,4.4,false
+Amritsar,Hillside,Gurudwara Baba Atal Sahib,4.2,true
+Amritsar,Urban,Hall Bazaar,4.1,false
+Amritsar,Rural,Pul Kanjri,4.0,true
+Srinagar,North,Dal Lake,4.5,false
+Srinagar,North,Shankaracharya Temple,4.1,true
+Srinagar,North,Shalimar Bagh,4.4,false
+Srinagar,North,Nishat Bagh,4.3,true
+Srinagar,North,Pari Mahal,4.2,false
+Srinagar,North,Hazratbal Shrine,4.6,true
+Srinagar,North,Chashme Shahi,4.7,false
+Srinagar,North,Botanical Garden,4.8,true
+Srinagar,North,Tulip Garden,4.0,false
+Srinagar,North,Mughal Gardens,4.9,true
+Shimla,North,The Ridge,4.1,false
+Shimla,North,Jakhoo Temple,4.5,true
+Shimla,North,Christ Church,4.2,false
+Shimla,North,Kufri,4.6,true
+Shimla,North,Mall Road,4.3,false
+Shimla,North,Tara Devi Temple,4.7,true
+Shimla,North,Indian Institute of Advanced Study,4.4,false
+Shimla,North,Summer Hill,4.8,true
+Shimla,North,Annandale,4.0,false
+Shimla,North,Chadwick Falls,4.9,true
+Guwahati,East,Kamakhya Temple,4.4,false
+Guwahati,East,Assam State Zoo,4.3,true
+Guwahati,East,Umananda Island,4.5,false
+Guwahati,East,Navagraha Temple,4.2,true
+Guwahati,East,Saraighat Bridge,4.6,false
+Guwahati,East,Regional Science Center,4.7,true
+Guwahati,East,Peacock Island,4.1,false
+Guwahati,East,Nehru Park,4.8,true
+Guwahati,East,Basistha Temple,4.0,false
+Guwahati,East,Guwahati Planetarium,4.9,true
+Jaisalmer,West,Jaisalmer Fort,4.3,false
+Jaisalmer,West,Patwon ki Haveli,4.1,true
+Jaisalmer,West,Gadisar Lake,4.4,false
+Jaisalmer,West,Desert National Park,4.2,true
+Jaisalmer,West,Kuldhara Village,4.5,false
+Jaisalmer,West,Bada Bagh,4.6,true
+Jaisalmer,West,Salim Singh ki Haveli,4.7,false
+Jaisalmer,West,Jain Temples,4.8,true
+Jaisalmer,West,Vyas Chhatri,4.0,false
+Jaisalmer,West,Desert Cultural Centre,4.9,true
+Jaisalmer,West,Jaisalmer Fort,4.3,false
+Rishikesh,North,Triveni Ghat,4.2,false
+Rishikesh,North,Laxman Jhula,4.1,true
+Rishikesh,North,Neelkanth Mahadev Temple,4.3,false
+Rishikesh,North,Beatles Ashram,4.4,true
+Rishikesh,North,Parmarth Niketan,4.5,false
+Rishikesh,North,Rajaji National Park,4.6,true
+Rishikesh,North,Gita Bhawan,4.7,false
+Rishikesh,North,Bharat Mandir,4.8,true
+Rishikesh,North,Swarg Ashram,4.0,false
+Rishikesh,North,Trimbakeshwar Temple,4.9,true
+Mysuru,South,Mysore Palace,4.8,false
+Mysuru,South,Brindavan Gardens,4.1,true
+Mysuru,South,Chamundi Hill,4.2,false
+Mysuru,South,Sri Chamarajendra Park,4.6,true
+Mysuru,South,Jaganmohan Palace,4.3,false
+Mysuru,South,Karanji Lake,4.7,true
+Mysuru,South,Mysuru Zoo,4.4,false
+Mysuru,South,Somnathpura Temple,4.9,true
+Mysuru,South,KRS Dam,4.5,false
+Mysuru,South,Srirangapatna,4.0,true
+Darjeeling,East,Tiger Hill,4.3,false
+Darjeeling,East,Tea Gardens,4.5,true
+Darjeeling,East,Batasia Loop,4.2,false
+Darjeeling,East,Japanese Peace Pagoda,4.6,true
+Darjeeling,East,Himalayan Mountaineering Institute,4.1,false
+Darjeeling,East,Ghoom Monastery,4.7,true
+Darjeeling,East,Rock Garden,4.4,false
+Darjeeling,East,Singalila National Park,4.9,true
+Darjeeling,East,Happy Valley Tea Estate,4.8,false
+Darjeeling,East,Observatory Hill,4.0,true
+Goa,West,Basilica of Bom Jesus,4.7,false
+Goa,West,Calangute Beach,4.5,true
+Goa,West,Anjuna Beach,4.2,false
+Goa,West,Dudhsagar Falls,4.6,true
+Goa,West,Aguada Fort,4.1,false
+Goa,West,Chapora Fort,4.8,true
+Goa,West,Colva Beach,4.3,false
+Goa,West,Panjim Church,4.9,true
+Goa,West,Vagator Beach,4.4,false
+Goa,West,Mangeshi Temple,4.0,true
+Hampi,South,Virupaksha Temple,4.5,false
+Hampi,South,Vithala Temple,4.7,true
+Hampi,South,Hemakuta Hill,4.2,false
+Hampi,South,Matanga Hill,4.8,true
+Hampi,South,Lotus Palace,4.1,false
+Hampi,South,Tungabhadra River,4.9,true
+Hampi,South,Elephant Stables,4.4,false
+Hampi,South,Queen's Bath,4.6,true
+Hampi,South,Hampi Bazaar,4.3,false
+Hampi,South,Anegundi,4.0,true
+Rameswaram,South,Ramanathaswamy Temple,4.1,false
+Rameswaram,South,Dhanushkodi Beach,4.3,true
+Rameswaram,South,Pamban Bridge,4.2,false
+Rameswaram,South,Gandhamadhana Parvatham,4.6,true
+Rameswaram,South,Agnitheertham,4.4,false
+Rameswaram,South,Kothandaramaswamy Temple,4.7,true
+Rameswaram,South,Abdul Kalam Memorial,4.5,false
+Rameswaram,South,Lakshmana Tirtham,4.8,true
+Rameswaram,South,Arulmigu Ramanatha Swamy Temple,4.9,false
+Rameswaram,South,Adam's Bridge,4.0,true
+Allahabad,North,Triveni Sangam,4.4,false
+Allahabad,North,Allahabad Fort,4.3,true
+Allahabad,North,Khusro Bagh,4.2,false
+Allahabad,North,Anand Bhavan,4.6,true
+Allahabad,North,Hanuman Mandir,4.1,false
+Allahabad,North,Alfred Park,4.7,true
+Allahabad,North,Swaraj Bhawan,4.5,false
+Allahabad,North,Chandra Shekhar Azad Park,4.8,true
+Allahabad,North,Allahabad Museum,4.9,false
+Allahabad,North,All Saints Cathedral,4.0,true
+Ujjain,Central,Mahakaleshwar Jyotirlinga,4.6,false
+Ujjain,Central,Kal Bhairav Temple,4.5,true
+Ujjain,Central,Vedh Shala Observatory,4.2,false
+Ujjain,Central,Harsiddhi Temple,4.7,true
+Ujjain,Central,Sandipani Ashram,4.1,false
+Ujjain,Central,Ram Ghat,4.8,true
+Ujjain,Central,Kumbh Mela,4.3,false
+Ujjain,Central,Mangalnath Temple,4.9,true
+Ujjain,Central,Bhartrihari Caves,4.4,false
+Ujjain,Central,Roopmati Pavilion,4.0,true
+Visakhapatnam,South,Rama Krishna Beach,4.2,false
+Visakhapatnam,South,Kailasagiri,4.1,true
+Visakhapatnam,South,Simhachalam Temple,4.3,false
+Visakhapatnam,South,INS Kurusura Submarine Museum,4.6,true
+Visakhapatnam,South,Borra Caves,4.4,false
+Visakhapatnam,South,Tenneti Park,4.7,true
+Visakhapatnam,South,Kambalakonda Wildlife Sanctuary,4.5,false
+Visakhapatnam,South,VUDA Park,4.8,true
+Visakhapatnam,South,Lawson's Bay Beach,4.9,false
+Visakhapatnam,South,Ross Hill,4.0,true
+Puri,East,Jagannath Temple,4.8,false
+Puri,East,Puri Beach,4.7,true
+Puri,East,Konark Sun Temple,4.2,false
+Puri,East,Chilika Lake,4.6,true
+Puri,East,Loknath Temple,4.1,false
+Puri,East,Balighai Beach,4.5,true
+Puri,East,Gundicha Temple,4.3,false
+Puri,East,Swargadwar Beach,4.9,true
+Puri,East,Raghurajpur Artist Village,4.4,false
+Puri,East,Sudarshan Crafts Museum,4.0,true
+Gangtok,East,Nathu La Pass,4.3,false
+Gangtok,East,Rumtek Monastery,4.5,true
+Gangtok,East,Enchey Monastery,4.2,false
+Gangtok,East,Tsomgo Lake,4.6,true
+Gangtok,East,Banjhakri Falls,4.1,false
+Gangtok,East,Ganesh Tok,4.7,true
+Gangtok,East,Hanuman Tok,4.4,false
+Gangtok,East,Bakthang Waterfalls,4.8,true
+Gangtok,East,Fambong La Wildlife Sanctuary,4.9,false
+Gangtok,East,Saramsa Garden,4.0,true
+Kanyakumari,South,Vivekananda Rock Memorial,4.7,false
+Kanyakumari,South,Kanyakumari Beach,4.5,true
+Kanyakumari,South,Thiruvalluvar Statue,4.2,false
+Kanyakumari,South,Padmanabhapuram Palace,4.6,true
+Kanyakumari,South,Thanumalayan Temple,4.1,false
+Kanyakumari,South,Wax Museum,4.8,true
+Kanyakumari,South,Muttom Beach,4.3,false
+Kanyakumari,South,Mathur Aqueduct,4.9,true
+Kanyakumari,South,Tsunami Monument,4.4,false
+Kanyakumari,South,Kamarajar Mani Mantapa Monument,4.0,true
+Ajmer,North,Ajmer Sharif Dargah,4.5,false
+Ajmer,North,Ana Sagar Lake,4.3,true
+Ajmer,North,Adhai Din Ka Jhonpra,4.2,false
+Ajmer,North,Soniji Ki Nasiyan,4.6,true
+Ajmer,North,Moti Dungri,4.1,false
+Ajmer,North,Mayo College,4.7,true
+Ajmer,North,Roopangarh Fort,4.4,false
+Ajmer,North,Foy Sagar Lake,4.8,true
+Ajmer,North,Taragarh Fort,4.9,false
+Ajmer,North,Kishangarh Fort,4.0,true
+Madurai,South,Meenakshi Temple,4.1,false
+Madurai,South,Thirumalai Nayakkar Mahal,4.3,true
+Madurai,South,Gandhi Memorial Museum,4.2,false
+Madurai,South,Koodal Azhagar Temple,4.6,true
+Madurai,South,Tiruparankundram Murugan Temple,4.7,false
+Madurai,South,Pazhamudircholai Murugan Temple,4.5,true
+Madurai,South,Vandiyur Mariamman Teppakulam,4.4,false
+Madurai,South,Athisayam Theme Park,4.8,true
+Madurai,South,Kazimar Big Mosque and Maqbara,4.9,false
+Madurai,South,Madurai Government Museum,4.0,true
+Kochi,South,Chinese Fishing Nets,4.4,false
+Kochi,South,Marine Drive,4.3,true
+Kochi,South,Mattancherry Palace,4.2,false
+Kochi,South,St. Francis Church,4.6,true
+Kochi,South,Paradesi Synagogue,4.1,false
+Kochi,South,Hill Palace Museum,4.7,true
+Kochi,South,Kerala Folklore Museum,4.5,false
+Kochi,South,Veegaland,4.8,true
+Kochi,South,Kumbalangi Integrated Tourism Village,4.9,false
+Kochi,South,Museum of Kerala History,4.0,true
+Jodhpur,West,Mehrangarh Fort,4.6,false
+Jodhpur,West,Umaid Bhawan Palace,4.5,true
+Jodhpur,West,Jaswant Thada,4.2,false
+Jodhpur,West,Ghanta Ghar,4.7,true
+Jodhpur,West,Mahamandir Temple,4.1,false
+Jodhpur,West,Rao Jodha Desert Rock Park,4.8,true
+Jodhpur,West,Mandore Gardens,4.4,false
+Jodhpur,West,Sardar Government Museum,4.9,true
+Jodhpur,West,Kailana Lake,4.3,false
+Jodhpur,West,Umed Garden Zoo,4.0,true
+Nashik,West,Trimbakeshwar Temple,4.2,false
+Nashik,West,Sula Vineyards,4.3,true
+Nashik,West,Pandavleni Caves,4.1,false
+Nashik,West,Kalaram Temple,4.4,true
+Nashik,West,Someshwar Temple,4.5,false
+Nashik,West,Shri Bhimashankar Jyotirling Mandir,4.6,true
+Nashik,West,Saptashrungi Devi Temple,4.7,false
+Nashik,West,Nashik Coin Museum,4.8,true
+Nashik,West,Artillery Museum,4.9,false
+Nashik,West,Navshya Ganapati Temple,4.0,true
+Trivandrum,South,Padmanabhaswamy Temple,4.8,false
+Khajuraho,North,Khajuraho Group of Monuments,4.3,false
+Aurangabad,West,Ellora Caves,4.7,false
+Munnar,South,Tea Gardens,4.5,false
+Kodaikanal,South,Kodai Lake,4.1,false
+Leh,North,Pangong Lake,4.4,false
+Ranthambore,North,Ranthambore National Park,4.6,false
+Alappuzha,South,Alappuzha Beach,4.2,false
+Jaisalmer,West,Patwon Ki Haveli,4.8,false
+Ooty,South,Botanical Gardens,4.3,false
+Mahabalipuram,South,Shore Temple,4.7,false
+Ajanta,West,Ajanta Caves,4.5,false
+Jodhpur,West,Umaid Bhawan Palace,4.1,false
+Kumbhalgarh,West,Kumbhalgarh Fort,4.4,false
+Rishikesh,North,Laxman Jhula,4.6,false
+Varanasi,East,Sarnath,4.2,false
+Jaisalmer,West,Sam Sand Dunes,4.8,false
+Shimla,North,Kufri,4.3,false
+Hampi,South,Hampi Bazaar,4.7,false
+Agra,North,Agra Fort,4.5,false
+Amritsar,North,Wagah Border,4.1,false
+Mysuru,South,Brindavan Gardens,4.4,false
+Kolkata,East,Howrah Bridge,4.6,false
+Puri,East,Konark Sun Temple,4.2,false
+Ahmedabad,West,Sabarmati Ashram,4.5,false
+Ahmedabad,West,Kankaria Lake,4.3,true
+Ahmedabad,West,Adalaj Stepwell,4.2,false
+Ahmedabad,West,Jama Masjid,4.6,true
+Ahmedabad,West,Sidi Saiyyed Mosque,4.1,false
+Ahmedabad,West,Calico Museum of Textiles,4.7,true
+Ahmedabad,West,Ahmed Shah's Mosque,4.4,false
+Ahmedabad,West,Science City,4.8,true
+Ahmedabad,West,Manek Chowk,4.9,false
+Ahmedabad,West,Sardar Patel National Museum,4.0,true
+Ahmedabad,West,Lal Darwaja,0.0,false
+Ahmedabad,West,Sabarmati Riverfront,0.0,false
